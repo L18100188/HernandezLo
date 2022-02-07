@@ -38,11 +38,11 @@ Como ya he mencionado tengo algo de experiencia con Javascript y con html, sin e
 habilidad para aprender y dominarlo rapido.  
 
 He utilizado los siguientes herramientas de desarrollo (y todas me han gustado):  
-- **Visual Studio:** [Descarga](https://visualstudio.microsoft.com/es/downloads/)
-- **Visual Studio Code:** [Descarga](https://code.visualstudio.com)
-- **Apache Netbeans:** [Descarga](https://netbeans.apache.org/download/index.html)
-- **SQL Server:** [Descarga](https://www.microsoft.com/es-mx/sql-server/sql-server-downloads?SilentAuth=1&wa=wsignin1.0)
-- **MySQL:** [Descarga](https://www.mysql.com/downloads/)  
+- **Visual Studio:** [Descargar](https://visualstudio.microsoft.com/es/downloads/)
+- **Visual Studio Code:** [Descargar](https://code.visualstudio.com)
+- **Apache Netbeans:** [Descargar](https://netbeans.apache.org/download/index.html)
+- **SQL Server:** [Descargar](https://www.microsoft.com/es-mx/sql-server/sql-server-downloads?SilentAuth=1&wa=wsignin1.0)
+- **MySQL:** [Descargar](https://www.mysql.com/downloads/)  
 
 En un futuro me gustaria saber adminstrar bases de datos, justamente elegi una especialidad relacionada a eso y espero en un futuro poder aplicar lo aprendido en un empleo.  
 Personalmente no me considero una persona de muchos hobbies pero si tuviera que elegir supongo que serian los videojuegos, peliculas y el baseball.  
