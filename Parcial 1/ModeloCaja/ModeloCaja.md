@@ -31,4 +31,33 @@ Si suponemos que la caja tiene el CSS siguiente, que establece los valores para 
   padding: 25px;
   border: 5px solid black;
 }
+~~~  
+
+El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.  
+
+![I2](https://mdn.mozillademos.org/files/16559/standard-box-model.png)  
+
+- **El modelo de cajas alternativo**  
+
+Podrías pensar que es más bien incómodo tener que sumar el borde y el área de relleno para obtener el tamaño real de la caja, ¡y tienes razón! Por este motivo, CSS introdujo un modelo de caja alternativo algún tiempo después del modelo de cajas estándar. Con este modelo, cualquier ancho es el ancho de la caja visible en la página, por lo tanto, el ancho del área de contenido es ese ancho menos el ancho para el relleno y el borde. El mismo CSS que hemos usado antes daría entonces el resultado siguiente (ancho = 350 px, altura = 150 px).
+
+![I3](https://mdn.mozillademos.org/files/16557/alternate-box-model.png)  
+
+Por defecto, los navegadores usan el modelo de cajas estándar. Si deseas activar el modelo de cajas alternativo para un elemento, hazlo configurando box-sizing: border-box. Con ello, le dices al navegador que tome como el borde de la caja el área definida por cualquier tamaño que establezcas.  
+
+~~~
+.box {
+  box-sizing: border-box;
+} 
+~~~  
+
+Si quieres que todos tus elementos usen el modelo de cajas alternativo (opción común entre los desarrolladores) debes establecer la propiedad box-sizing en el elemento <html>. Luego debes configurar todos los demás elementos para que hereden ese valor, como se ve en el fragmento de código siguiente.
+
+~~~
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 ~~~
