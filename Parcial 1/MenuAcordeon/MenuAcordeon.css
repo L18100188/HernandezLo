@@ -20,13 +20,19 @@ ul > li:hover > ul {
     height: 100%;
 }
 
+body{
+    background-color: cyan;
+}
+
 .opcion {
     background: red;
     color: white;
+    justify-content: center;
 }
+
 
 .subOpcion {
     padding-left: 20px;
-    background: blue;
+    background: black;
     color: white;
 }
