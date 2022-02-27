@@ -4,7 +4,7 @@
 }
 
 body {
-	font: 14px/1.4 Georgia, Serif;
+	font: 16px/1.4 Georgia, Serif;
 }
 
 #contenedor {
@@ -22,18 +22,18 @@ table {
 }
 
 
-tr:nth-of-type(odd) { /* Estilo Zebra para las filas */
-	background: gray;
+tr:nth-of-type(odd) {
+	background: pink;
 }
 
 th {
-	background: blue;
+	background: yellowgreen;
 	color: white;
 	font-weight: bold;
 }
 
 td, th {
 	padding: 6px;
-	border: 1px solid #ccc;
+	border: 1px solid rgb(0, 0, 0);
 	text-align: left;
 }
