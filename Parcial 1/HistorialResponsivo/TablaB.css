@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 16px/1.4 Georgia, Serif;
+}
+
+#contenedor {
+	margin: 50px;
+}
+
+p {
+	margin: 20px 0;
+}
+
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+
+tr:nth-of-type(odd) {
+	background: pink;
+}
+
+th {
+	background: yellowgreen;
+	color: white;
+	font-weight: bold;
+}
+
+td, th {
+	padding: 6px;
+	border: 1px solid rgb(0, 0, 0);
+	text-align: center;
+}
