@@ -3,36 +3,53 @@
 	padding: 0;
 }
 
-body {
+body 
+{
+
 	font: 16px/1.4 Georgia, Serif;
+
 }
 
-#contenedor {
+#contenedor 
+{
 	margin: 50px;
 }
 
-p {
+p 
+{
 	margin: 20px 0;
 }
 
 
-table {
+table 
+{
 	width: 100%;
 	border-collapse: collapse;
+    
 }
 
+tr
+{
+    font-family: 'Times New Roman', Times, serif;
 
-tr:nth-of-type(odd) {
+}
+
+tr:nth-of-type(odd) 
+{
 	background: pink;
+    
 }
 
-th {
+th 
+{
 	background: yellowgreen;
 	color: white;
 	font-weight: bold;
+    font-style: italic;
 }
 
-td, th {
+td, th 
+{
 	padding: 6px;
 	border: 1px solid rgb(0, 0, 0);
 	text-align: center;
