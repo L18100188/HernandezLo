@@ -1,0 +1,86 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  div.barra 
+  {
+    position: fixed;
+    background-color: #4E94AB;
+    width: 125px;
+    height: 150%;
+    text-align: center;
+    justify-content: center;
+    overflow: auto;
+    padding: 0%;
+    
+  }
+
+  a 
+  {
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    
+    
+  }
+  
+  a:hover 
+  {
+    background-color: rgba(0, 0, 0,0.3);
+    color: white;
+  }
+  
+ 
+  div.contenido 
+  {
+    background-color: rgb(255, 255, 255);
+    margin-left: 125px;
+    text-align: center;
+    font-size: 13pt;
+    padding: 1px 16px;
+    height: 1500px;
+    
+  }
+  
+  .contenidoOp 
+  { 
+    display: none;  
+  }
+  
+  #inicio:target,
+  #definicion:target,
+  #acerca:target,
+  #contacto:target { display: block;}
+  
+  @media screen and (max-width: 1200px) 
+  {
+
+    div.barra 
+    {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+   
+    .barra a 
+    {
+      float: left; 
+    }
+
+    div.contenido {margin-left: 0;}
+
+  }
+  
+  
+  @media screen and (max-width: 600px) 
+  {
+    .barra a 
+    {
+      float: none;
+      text-align: center;
+    }
+  }
