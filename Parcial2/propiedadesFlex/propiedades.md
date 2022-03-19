@@ -1,4 +1,4 @@
-## Propiedes FlexBox
+# Propiedes FlexBox
 
 Flexbox es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. 
 
@@ -6,7 +6,7 @@ Cuando a una caja(box) contiene otros elementos dentro y a esta caja contenedora
 
 Existen propiedades para el padre (flex-container) y propiedades para los hijos (flex-items). En este documento expondremos las propiedades de Padre e hijo.
 
-# Propiedades para el padre (flex-container) 
+## Propiedades para el padre (flex-container) 
 
 
 | Propiedad | Descripción | Valores |
@@ -19,7 +19,7 @@ Existen propiedades para el padre (flex-container) y propiedades para los hijos 
 |   |   |   |
 |   |   |   |
 
-# Propiedades para los hijos (flex-items)
+## Propiedades para los hijos (flex-items)
 
 | Propiedad | Descripción | Valores |
 |---|---|---|
