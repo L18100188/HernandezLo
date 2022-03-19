@@ -4,7 +4,7 @@
 
 Cuando a una caja(box) contiene otros elementos dentro y a esta caja contenedora le ponemos la propiedad display a flex, le damos la habilidad de modificar el tamaño y orden de sus elementos internos. Esto se hace dándole valor a una serie de propiedades. 
 
-Existen propiedades para el padre (flex-container) y propiedades para los hijos (flex-items). En este documento expondremos las propiedades de Padre e hijo.
+Existen propiedades para el padre (flex-container) y propiedades para los hijos (flex-items). En este documento expondremos las propiedades de ambos.
 
 ## Propiedades para el padre (flex-container) 
 
