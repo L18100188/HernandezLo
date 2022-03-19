@@ -11,10 +11,10 @@ Existen propiedades para el padre (flex-container) y propiedades para los hijos 
 
 | Propiedad | Descripción | Valores |
 |---|---|---|
-| display | Si su valor es flex o inline-flex, la propiedad display define un contenedor flex ( flexbox ).  | inline-flex / -ms-flexbox /-ms-inline-flexbox. |
-| flex-direction | Establece la dirección del eje principal y por tanto la dirección de los elementos flex. | flex-direction: row / row-reverse / column / column-reverse;  |
-|   |   |   |
-|   |   |   |
+| display | Si su valor es flex o inline-flex, la propiedad display define un contenedor flex ( flexbox ).  | flex / inline-flex; / -ms-flexbox /-ms-inline-flexbox. |
+| flex-direction | Establece la dirección del eje principal y por tanto la dirección de los elementos flex. | row / row-reverse / column / column-reverse; |
+| flex-wrap | Especifica si puede haber un cambio de línea ( wrap ) o no ( nowrap ). | nowrap / wrap / wrap-reverse; |
+| flex-flow | Es la forma abreviada para las propiedades flex-direction y flex-wrap. | flex-direction [flex-wrap]  |
 |   |   |   |
 |   |   |   |
 |   |   |   |
