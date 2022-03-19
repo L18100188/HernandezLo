@@ -12,7 +12,7 @@ Existen propiedades para el padre (flex-container) y propiedades para los hijos 
 | Propiedad | Descripción | Valores |
 |---|---|---|
 | display | Si su valor es flex o inline-flex, la propiedad display define un contenedor flex ( flexbox ).  | display: flex /  inline-flex; display: -ms-flexbox / -ms-inline-flexbox.  |
-|   |   |   |
+| flex-direction | Establece la dirección del eje principal y por tanto la dirección de los elementos flex. | flex-direction: row / row-reverse / column / column-reverse;  |
 |   |   |   |
 |   |   |   |
 |   |   |   |
