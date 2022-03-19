@@ -1,4 +1,4 @@
-# Propiedes FlexBox
+# Propiedades FlexBox
 
 Flexbox es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. 
 
@@ -15,9 +15,9 @@ Existen propiedades para el padre (flex-container) y propiedades para los hijos 
 | flex-direction | Establece la dirección del eje principal y por tanto la dirección de los elementos flex. | row / row-reverse / column / column-reverse; |
 | flex-wrap | Especifica si puede haber un cambio de línea ( wrap ) o no ( nowrap ). | nowrap / wrap / wrap-reverse; |
 | flex-flow | Es la forma abreviada para las propiedades flex-direction y flex-wrap. | flex-direction [flex-wrap]  |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| align-items | Define como se colocan los elementos dentro de una caja flexible flexbox relativamente al eje transversal. | flex-start / flex-end / center / baseline / stretch; / -ms-flex-align:start / end / center / baseline / stretch;  |
+| justify-content | Define como se colocan los elementos dentro de una caja flexible ( flexbox ) relativamente al eje principal, cuando los elementos no ocupan toda la caja. | flex-start / flex-end / center / space-between / space-around; / -ms-flex-pack: start / end / center / justify / justify;  |
+| align-content | Alinea los elementos del contenedor flex cuando los elementos no utilizan todo el espacio disponible en el eje transversal. |  flex-start / flex-end / center / space-between / space-around / stretch; / -ms-flex-line-pack: start / end / center / justify / stretch; |
 
 ## Propiedades para los hijos (flex-items)
 
