@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 14% 43% 43%;
+
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: 'encabezado encabezado'
+                         'seccion1 seccion2'
+                         'seccion3 seccion4'
+    ;    
+}
+
+#encabezado {
+    grid-area: encabezado;
+    background-color: blue;
+}
+
+
+#seccion1 {
+    grid-area: seccion1;
+    background-color: greenyellow;
+}
+#seccion2 {
+    grid-area: seccion2;
+    background-color: red;
+}
+#seccion3 {
+    grid-area: seccion3;
+    background-color: pink;
+}
+#seccion4 {
+    grid-area: seccion4;
+    background-color: grey;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .contenedor{
+
+    display: grid;
+    grid-template-columns: 10% 45% 45%;
+    grid-template-rows: 50% 50%;
+
+    grid-template-areas: 'encabezado seccion1 seccion2 '
+                         'encabezado seccion3 seccion4';    
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .contenedor{
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 12% 22% 22% 22% 22%;
+
+    grid-template-areas: 'encabezado'
+                         'seccion1'
+                         'seccion2'
+                         'seccion3' 
+                         'seccion4';    
+    }
+
+}
