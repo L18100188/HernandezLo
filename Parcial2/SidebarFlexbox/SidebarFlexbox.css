@@ -1,6 +1,7 @@
-* {box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
  }
  
  
@@ -9,6 +10,7 @@
    width: 125px;
    text-align: center;
    justify-content: center;
+   
  }
  
  div.contenido {
@@ -17,6 +19,7 @@
    flex-grow: 2;
    text-align: center;
    font-size: 15pt;
+   
  }
 
  div.contenedorF {
@@ -58,7 +61,7 @@
 
  }
  
- @media screen and (max-width: 500px) {
+ @media screen and (max-width: 600px) {
  
    div.sidebar 
    {
