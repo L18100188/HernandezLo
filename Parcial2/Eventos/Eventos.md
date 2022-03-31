@@ -4,8 +4,6 @@ El burbujeo y la captura son los 2 modelos que utilizan los eventos DOM para pro
 
 Supongamos que su estructura DOM es: 
 
-`<div id="container">
-  <button>Click me</button>
-</div>`
+![C1](https://i.gyazo.com/fc8af1f6bc6fad16bb2edeb289bca9d9.png)
 
 
