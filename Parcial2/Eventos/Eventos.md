@@ -1,21 +1,12 @@
 # Propagación y la captura de eventos en JavaScript
 
-El burbujeo y la captura son los 2 modelos que utilizan los eventos DOM para propagarse.
+Existen tres fases de propagación de eventos en JavaScript y son esenciales para comprender el uso correcto de los eventos.
+Estas tres fases en orden son:
 
-Supongamos que su estructura DOM es: 
+1. La fase de **captura** de eventos, 
+2. La fase objetivo  
+3. La fase de **propagación** del evento.
 
-![C1](https://i.gyazo.com/fc8af1f6bc6fad16bb2edeb289bca9d9.png)
+En esencia, el evento primero desciende a través de los elementos principales hasta que alcanza el elemento de destino (fase de captura). Cuando el evento alcanza el objetivo, se dispara allí (fase objetivo) y luego vuelve a subir por la cadena (fase burbujeante), llamando a los controladores en el camino. 
 
-Desea realizar un seguimiento cuando los usuarios hacen clic en el **button** y tiene 2 detectores de eventos, uno en el botón y otro en **container**.
-
-Recuerde, un clic en un elemento hijo siempre se propagará a sus padres, a menos que detenga la propagación (ver más adelante).
-
-Se llamará a esos oyentes de eventos en orden, y este orden está determinado por el modelo de generación / captura de eventos utilizado.
-
-Burbujeantesignifica que el evento se propaga desde el elemento en el que se hizo clic (el hijo) hasta todo su árbol padre, comenzando por el más cercano.
-
-En nuestro ejemplo, el controlador debuttondisparará antes del#containermanipulador.
-
-Capturandoes lo contrario: los controladores de eventos externos se activan antes que el controlador más específico, el que está enbutton.
-
-
+El elemento objetivo se refiere al lugar exacto que está desencadenando el evento. Por ejemplo, si hace clic en un botón dentro de a **<div>**, la **<button>** etiqueta correspondiente sería el objetivo. Se puede acceder a este elemento como event.targety no cambiará a lo largo de las fases de propagación del evento.
