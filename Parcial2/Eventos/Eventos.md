@@ -6,7 +6,7 @@ Supongamos que su estructura DOM es:
 
 ![C1](https://i.gyazo.com/fc8af1f6bc6fad16bb2edeb289bca9d9.png)
 
-Desea realizar un seguimiento cuando los usuarios hacen clic en el *button* y tiene 2 detectores de eventos, uno en el botón y otro en >container.
+Desea realizar un seguimiento cuando los usuarios hacen clic en el **button** y tiene 2 detectores de eventos, uno en el botón y otro en **container**.
 
 Recuerde, un clic en un elemento hijo siempre se propagará a sus padres, a menos que detenga la propagación (ver más adelante).
 
