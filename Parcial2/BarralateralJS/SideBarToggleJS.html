@@ -6,22 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SideBar</title>
     <link rel="stylesheet" href="./SideBarToggleJS.css">
+    <script src="https://kit.fontawesome.com/b581440993.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- input type="checkbox" id="toggle"> -->
-    <div id="sb" class="sidebar">
-        <a id="opc1" href="#opcion1">Opcion 1</a>
-        <a id="opc2" href="#opcion2">Opcion 2</a>
-        <a id="opc3" href="#opcion3">Opcion 3</a>
-        <a id="opc4" href="#opcion4">Opcion 4</a>
+    <div id="sb" class="barra">
+        <a id="op1" href="#inicio"> <i class="fa-solid fa-desktop"></i> INICIO</a>
+        <a id="op2" href="#cpu"> <i class="fa-solid fa-microchip"></i> CPU </a>
+        <a id="op3" href="#ram"> <i class="fa-solid fa-memory"></i> RAM </a>
+        <a id="op4" href="#gpu"> <i class="fa-solid fa-tv"></i> GPU </a>
+        <a id="op5" href="#mb"> <i class="fa-solid fa-table-cells"></i> MB </a>
+        <a id="op6" href="#hdd"> <i class="fa-solid fa-hard-drive"></i> HDD </a>
+        <a id="op7" href="#psu"> <i class="fa-solid fa-plug"></i> PSU </a>
+        <a id="op8" href="#io"> <i class="fa-solid fa-computer-mouse"></i> I/O </a>
+
     </div>
-    <div id="ct" class="content">
+    <div id="ct" class="contenido">
         <!-- label for="toggle">Menu</label> -->
-        <button id="btn" type="button">Menu</button>
-        <div id="opcion1" class="contenidoOpcion">Opcion 1</div>
-        <div id="opcion2" class="contenidoOpcion">Opcion 2</div>
-        <div id="opcion3" class="contenidoOpcion">Opcion 3</div>
-        <div id="opcion4" class="contenidoOpcion">Opcion 4</div>
+        <button id="btn" type="button"><i class="fa-solid fa-bars fa-2x"></i></button>
+        <div id="inicio" class="contenidoOpcion">
+            <h1>Bienvenido(a)</h1><br/>
+            <p> 
+                El punto de esta pequeña practica es mostrar el correcto funcionamiento de un menu lateral, con la opcion de poder esconder y mostrar el menu a traves de un boton usando JS. 
+
+            </p><br/></br>
+
+            <h1>Los componentes de una computadora</h1></br>
+
+            <p>
+                Una computadora es un sistema informático compuesto por dos aspectos básicos: el hardware, que significa “soporte físico”, y el software, que se refiere a lo intangible o el “programa”. 
+                Los soportes físicos son elementos electrónicos que trabajan conectados para proporcionar datos, y esos datos son procesados gracias a las instrucciones que proporcionan los programas.
+                
+            </p></br>
+            <p>
+                El hardware es como una caja en la que se conectan una serie de dispositivos que procesan información de entrada y de salida. El software es el conjunto de instrucciones para ejecutar esa información de entrada y salida. 
+                Sin las instrucciones del software, la computadora sería una caja sin utilidad, al igual que lo sería el cuerpo humano sin un cerebro.
+            </p></br></br>
+
+            <img src="https://bajapc.com.mx/assets/uploads/sw_1_533.png?1623445360">
+        </div>
+
+        <div id="cpu" class="contenidoOpcion">
+            <h1>Procesador</h1></br></br>
+            <p>
+                Es la Unidad Central de Procesamiento (CPU), es decir, el cerebro de la computadora que controla todo lo que ejecuta el ordenador y es responsable de realizar los cálculos y la comprensión de datos. Hay varios tipos de CPU que se diferencian, entre otras cosas, por su velocidad para procesar la información. 
+                Esa velocidad se mide en una unidad de frecuencia llamada Hertz (o Hercio en español) y, cuanto más rápida es la velocidad alcanzada por el procesador, más rápido será el rendimiento de la computadora. En la actualidad, las dos marcas principales de CPU son AMD e Intel.
+            </p></br></br>
+            <img src="https://opsoffice.com.mx/img/productos/manuales/07-07-2017_15-42-38_Ryzen%205%201400_.jpg">
+        </div>
+
+        <div id="ram" class="contenidoOpcion">
+            <h1>Memoria RAM</h1></br></br>
+            <p> 
+                Es la memoria que almacena información, de manera temporal y rápida, para que la computadora la utilice en el momento. 
+                Su capacidad de almacenamiento se mide en unidades llamadas gigabytes (GB). A mayor cantidad de memoria RAM, más rápido puede funcionar la computadora, por ejemplo, para abrir y usar varios programas a la vez. 
+                El contenido de la memoria RAM se elimina tan pronto se apaga la computadora porque no almacena datos (archivos, videos, programas, etc.), sino que conserva información sobre las acciones que se están realizando con esos datos. 
+                No almacena el archivo o el programa en sí, sino la información para ejecutarlo.
+            </p></br></br>
+            <img src="https://www.cyberpuerta.mx/img/product/L/CP-CORSAIR-CMU16GX4M2A2666C16-1.jpg">
+
+        </div>
+
+        <div id="gpu" class="contenidoOpcion">
+            <h1>Tarjeta Grafica</h1></br></br>
+            <p>
+                Es un dispositivo de hardware interno que se conecta a la placa madre y permite que la computadora muestre imágenes en el monitor. 
+                Requiere de la instalación de un software para que le indique a la computadora cómo usar esa placa de video. 
+                El usuario puede modificar la configuración de la imagen proyectada en el monitor, por ejemplo, la calidad (mayor o menor definición), el tamaño, entre otros.
+            </p></br></br>
+            <img src="https://http2.mlstatic.com/D_NQ_NP_750145-MLM46884393059_072021-W.jpg">
+        </div>
+
+        <div id="mb" class="contenidoOpcion">
+            <h1>Placa madre (o motherboard)</h1></br></br>
+            <p> 
+                Es la placa principal de cualquier sistema informático al que todos los demás dispositivos se conectan, tanto de manera directa (como los circuitos eléctricos interconectados) como indirecta (a través de puertos USB u otro tipo de conectores). Cuenta con un software básico llamado BIOS que le permite realizar y sincronizar sus funciones básicas (como la transmisión de datos, la administración de la energía eléctrica y el reconocimiento de la conexión física de otros componentes externos).
+            </p></br></br>
+            <img src="https://www.empowerlaptop.com/wp-content/uploads/2019/08/AB350M-Pro4-1-1.jpg">
+
+        </div>
+
+        <div id="hdd" class="contenidoOpcion">
+            <h1>Disco Duros</h1></br></br>
+            <p>
+                Es la memoria que almacena datos de manera permanente (o hasta que el usuario los elimine), como documentos, planillas, imágenes, videos, audios, copias de seguridad de los archivos, entre otros. 
+                Son datos almacenados que la computadora no necesita de manera inmediata o rápida para su funcionamiento, sino que es el usuario el que los utiliza de manera directa. Existen dos tipos de dispositivos de secundario: interno (la unidad de disco duro) y externo (disco duro externo, tarjeta de memoria, pendrive, CD ROM, etc.).
+            </p></br></br>
+            <img src="https://datalockperu.com/wp-content/uploads/2022/02/Disco-Duro-Western-Digital-1TB.jpg">
+
+        </div>
+
+        <div id="psu" class="contenidoOpcion">
+            <h1>Fuentes de Poder</h1></br></br>
+            <p>
+                Las fuentes de poder o fuentes de alimentación, son equipos cuya principal función es transformar la energía. Existe la creencia que las fuentes de poder generan energía y esto es falso. 
+                Sirven para transformar un tipo de energía en otra necesaria para el correcto funcionamiento de nuestros dispositivos
+            </p></br></br>
+            <img src="https://intercompras.com/images/product/CORSAIR_CP-9020061-NA.jpg">
+        </div>
+
+        <div id="io" class="contenidoOpcion">
+            <h1>Hardware Externo</h1></br></br>
+            <p>El hardware externo de una computadora está conformado principalmente por: 
+            </p></br>
+            <h2>Dispositivos de entrada</h2></br>
+            <p>Son piezas que reciben datos sin procesar y que la computadora puede procesar a través del correspondiente software. 
+                Se dividen en dos categorías: dispositivos de entrada manual, que deben ser operados por el usuario (teclado, mouse, pantalla táctil, micrófono, etc.) y dispositivos de entrada automática, que accionan el ingreso de información por su cuenta, de manera independiente del usuario (lector de banda magnética, reconocimiento de caracteres de tinta magnética, lector de PIN y chip, lector de código de barras, etc.).
+            </p></br>
+            <h2>Dispositivos de salida</h2></br>
+            <p>
+                Son piezas que envían hacia afuera los datos procesados por la computadora. 
+                Hay dos tipos: de salida temporal (como el monitor, que actualiza constantemente la imagen de salida en la pantalla) y de salida permanente (como la impresora, que reproduce información sobre un papel que perdura como una copia impresa).
+            </p></br>
+
+            <h2>Dispositivos periféricos</h2></br>
+            <p>
+                Son la mayoría de los dispositivos de entrada y de salida que se consideran componentes de hardware externos “no esenciales” porque la computadora puede funcionar sin ellos. Por ejemplo, parlantes, cámara web, teclado, micrófono, impresora, escáner, mouse, joystick, entre otros.
+            </p></br></br>
+            <img src="https://m.media-amazon.com/images/I/416S6FOCJbL._AC_.jpg">
+        </div>
+
     </div>
     <script src="SideBarToggleJS.js"></script>
 </body>

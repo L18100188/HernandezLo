@@ -4,38 +4,52 @@
     padding: 0;
   }
   
-  .sidebar {
+  .barra {
     position: fixed;
-    background-color:lightgray;
-    width: 200px;
-    height: 100%;
+    background-color:#4E94AB;
+    width: 150px;
+    height: 150%;
     overflow: auto;
+    text-align: center;
+    justify-content: center;
   }
   
   a {
     display: block;
     text-decoration: none;
-    padding: 5px;
+    padding: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
   }
   
   a:hover {
-    background-color: blue;
+    background-color: rgba(0, 0, 0,0.3);
     color: white;
   }
   
-  .content {
+  .contenido {
     background-color: cadetblue;
-    margin-left: 200px;
+    margin-left: 150px;
     padding: 1px 16px;
     height: 1500px;
+    color: white;
+    
   }
   
   .contenidoOpcion { display: none; }
   
-  #opcion1:target,
-  #opcion2:target,
-  #opcion3:target,
-  #opcion4:target { display: block;}
+  #inicio:target,
+  #cpu:target,
+  #ram:target,
+  #gpu:target,
+  #mb:target,
+  #hdd:target,
+  #psu:target,
+  #io:target { 
+    display: block; 
+    text-align: center;
+    font-size: 15pt;
+  }
   
   
  /* input {display: none;} 
@@ -58,22 +72,31 @@
   .ContenidoMargen {
       margin-left: 0px;
   }
+
   
   @media screen and (max-width: 1200px) {
-    div.sidebar {
+    div.barra {
       position: relative;
       width: 100%;
       height: auto;
+      
     }
   
-    .sidebar a {float: left;}
+    .barra a {float: left;}
   
-    div.content {margin-left: 0;}
+    div.contenido {margin-top: 0;} 
+
+    
   }
   
-  @media screen and (max-width: 600px) {
-    .sidebar a {
+  @media screen and (max-width: 685px) {
+    .barra a {
       float: none;
       text-align: center;
     }
+    
   }
+
+  
+
+  
