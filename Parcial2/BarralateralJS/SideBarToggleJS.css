@@ -52,18 +52,6 @@
   }
   
   
- /* input {display: none;} 
-  
-  input:checked + .sidebar{
-    width:0px;
-  }
-  
-  input:checked ~ .content {
-    margin-left: 0px;
-  }
-
-  */
-  
   .MenuOculto {
       width: 0px;
 
