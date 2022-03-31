@@ -11,7 +11,7 @@ En esencia, el evento primero desciende a través de los elementos principales h
 
 El elemento objetivo se refiere al lugar exacto que está desencadenando el evento. Por ejemplo, si hace clic en un botón dentro de a **div**, la **button** etiqueta correspondiente sería el objetivo. Se puede acceder a este elemento como **event.target** y no cambiará a lo largo de las fases de propagación del evento.
 
-![I1](C:\Users\luiis\Pictures\dd.png)
+![I1](https://i.gyazo.com/761a79f42f76774bdf5b4926949f48f0.png)
 
 ## ¿Qué es la captura de eventos?
 
