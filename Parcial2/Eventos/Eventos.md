@@ -12,3 +12,11 @@ En esencia, el evento primero desciende a través de los elementos principales h
 El elemento objetivo se refiere al lugar exacto que está desencadenando el evento. Por ejemplo, si hace clic en un botón dentro de a **div**, la **button** etiqueta correspondiente sería el objetivo. Se puede acceder a este elemento como **event.target** y no cambiará a lo largo de las fases de propagación del evento.
 
 ![I1](C:\Users\luiis\Pictures\dd.png)
+
+## ¿Qué es la captura de eventos?
+
+La captura de eventos es la primera fase que ocurre cuando el evento se mueve hacia abajo por los elementos desde la parte superior **(window)** hasta el objetivo del evento, como una cascada. Rara vez se usa cuando se manejan eventos, y la mayoría de las veces ocurre entre bastidores. Si se coloca un controlador, generalmente se hace durante la fase de propagación del evento, porque cuanto más cerca esté un elemento del objetivo, más contexto tendrá el elemento.
+
+Cuando los controladores de eventos se configuran con **onClick** (o un diferente **onevent**) o **addEventListener(event, handler)**, solo la fase de destino y la fase de propagación del evento lo detectarán. Si queremos capturar un evento durante la fase de captura, necesitamos agregar explícitamente **{capture: true}** o solo el implícito **true** al final del detector de eventos.
+
+![I2](https://i.gyazo.com/9713a0c301ea0704c31dd7561b281fb9.png)
