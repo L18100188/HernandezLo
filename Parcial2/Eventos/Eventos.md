@@ -20,3 +20,13 @@ La captura de eventos es la primera fase que ocurre cuando el evento se mueve ha
 Cuando los controladores de eventos se configuran con **onClick** (o un diferente **onevent**) o **addEventListener(event, handler)**, solo la fase de destino y la fase de propagación del evento lo detectarán. Si queremos capturar un evento durante la fase de captura, necesitamos agregar explícitamente **{capture: true}** o solo el implícito **true** al final del detector de eventos.
 
 ![I2](https://i.gyazo.com/9713a0c301ea0704c31dd7561b281fb9.png)
+
+Aunque oficialmente hay tres fases, la segunda fase “objetivo” que ocurre cuando **event.target** se alcanza el elemento, no se maneja por separado como las demás. Tanto la captura de eventos como los controladores de propagación de eventos activarán esta fase automáticamente cuando terminen y comiencen con el elemento de destino.
+
+## ¿Qué es el evento burbujeante?
+
+El burbujeo de eventos implica ejecutar los controladores del elemento de destino y luego "burbujear" hacia arriba hasta los controladores del siguiente elemento padre, luego el elemento abuelo por encima de ese, y así sucesivamente. Puede pensar en esto como algo similar a la noción de burbujas que se elevan en el agua. 
+
+Esto significa que si tenemos una **p** en el interior de un anidado **div**, en el interior de un anidado **form**, los manipuladores se les ejecutan en orden: **p -> div -> form**. Este burbujeo se ejecutará hasta que llegue a la parte superior de los elementos, a través del html, el **document object** y hasta el **window**. Casi todos los eventos aparecerán, con pocas excepciones como **focus**.
+
+![I3](https://i.gyazo.com/d37ea05661029029d605d451c5fd8624.png)
