@@ -9,7 +9,7 @@ $(document).ready(function (){
     });
 
     $('#btnJS').click(function() {
-        $('.modal-body').text("Se activo el boton JS");
+        $('.modal-body').text("Se activo el boton");
         $('#ventanaM').modal();
     });
 
