@@ -21,3 +21,9 @@ Las promesas en Javascript se representan a través de un **Object** , y cada pr
 | **.catch(function reject)** | Ejecuta la función callback reject cuando la promesa se rechaza |
 | **.then(function resolve, function reject)** | Método equivalente a las dos anteriores en el mismo .then(). |
 |**.finally (function end)** | Ejecuta la función callback end tanto si se cumple como si se rechaza. |
+
+## Consumir una promesa
+
+La forma general de consumir una promesa es utilizando el .then() con un sólo parámetro, puesto que muchas veces lo único que nos interesa es realizar una acción cuando la promesa se cumpla:
+
+![2](https://i.gyazo.com/36652a350630fe880c1db0789ff4a434.png)
