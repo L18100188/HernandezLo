@@ -61,7 +61,7 @@ window.onload = function() {
 
         $('#btnJsonF').click(function() {
 
-            let promesa = feth('getRegistros.php');
+            let promesa = feth('getregistros.php');
 
             /*promesa.then(function(respuesta) {respuesta.json(); });*/
 
