@@ -61,15 +61,15 @@ window.onload = function() {
 
         $('#btnJsonF').click(function() {
 
-            let Promise = fetch('getregistros.php');
+            let Promesa = fetch('getregistros.php');
 
             /*promesa.then(function(respuesta) {respuesta.json(); });*/
 
-            Promise.then(res => Fetch.js())
+            Promesa.then(respuesta => respuesta.json())
                    .then(function(dato) {refrescar(dato) });
 
 
-        })
+        });
 
         
         function refrescar(objeto) {
