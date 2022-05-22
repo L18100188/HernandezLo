@@ -65,9 +65,9 @@ window.onload = function() {
 
 
       $('#btnFetch').click(function() {
-          fetch('getregistros.php')
-               .then((respuesta) => respuesta.json() )
-                    .then(function(dato) {refrescar(dato) });
+            fetch('getregistros.php')
+            .then((respuesta) => respuesta.json() )
+            .then(function(dato) {refrescar(dato) });
       });
 
       function refrescar(objeto) {
