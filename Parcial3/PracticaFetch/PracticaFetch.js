@@ -49,7 +49,7 @@ window.onload = function() {
     });
 
     $("#btnjson").click(function() {
-        $.post('getregistro.php', {}, function(data) {
+        $.post('getregistros.php', {}, function(data) {
           console.log(data);
           $('#NumControl').val(data.NumControl);
           $('#NombreEs').val(data.NombreEs);
