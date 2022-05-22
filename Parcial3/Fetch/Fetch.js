@@ -61,7 +61,7 @@ window.onload = function() {
 
         $('#btnJsonF').click(function() {
 
-            let Promesa = fetch('getregistros.php');
+            let Promesa = fetch('getregistros.php')
 
             /*promesa.then(function(respuesta) {respuesta.json(); });*/
 
@@ -71,7 +71,6 @@ window.onload = function() {
 
         });
 
-        
         function refrescar(objeto) {
 
             $('#NumControl').val(objeto.NumControl);
