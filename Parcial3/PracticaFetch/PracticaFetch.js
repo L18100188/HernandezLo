@@ -71,9 +71,9 @@ window.onload = function() {
       });*/
 
       $('#btnFetch').click(function() {
-        let promesa = fetch('getregistros.php')
-            promesa.then((respuesta) => respuesta.json() )
-            promesa.then(function(dato) {refrescar(dato) });
+            fetch('getregistros.php')
+                  .then((respuesta) => respuesta.json() )
+                      .then(function(dato) {refrescar(dato) });
     });
 
       function refrescar(objeto) {
