@@ -49,7 +49,7 @@ window.onload = function() {
     });
 
     $("#btnjson").click(function() {
-        $.post('getregistros.php', {}, function(data) {
+        $.post('getregistro.php', {}, function(data) {
           console.log(data);
           $('#NumControl').val(data.NumControl);
           $('#NombreEs').val(data.NombreEs);
@@ -64,17 +64,11 @@ window.onload = function() {
       });
 
 
-      /*$('#btnFetch').click(function() {
+      $('#btnFetch').click(function() {
           fetch('getregistros.php')
                .then((respuesta) => respuesta.json() )
                     .then(function(dato) {refrescar(dato) });
-      });*/
-
-      $('#btnFetch').click(function() {
-            fetch('getregistros.php')
-                  .then((respuesta) => respuesta.json() )
-                      .then(function(dato) {refrescar(dato) });
-    });
+      });
 
       function refrescar(objeto) {
         $('#NumControl').val(objeto.NumControl);
