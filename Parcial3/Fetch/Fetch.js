@@ -65,27 +65,24 @@ window.onload = function() {
 
             /*promesa.then(function(respuesta) {respuesta.json(); });*/
 
-            promesa.then(respuesta => respuesta.json())
+            promesa.then(res => res.json())
                    .then(function(dato) {refrescar(dato) });
+
+                   function refrescar(objeto) {
+
+                    $('#NumControl').val(objeto.NumControl);
+                    $('#NombreEs').val(objeto.NombreEs);
+                    $('#ApellidoPa').val(objeto.ApellidoPa);
+                    $('#ApellidoMa').val(objeto.ApellidoMa);
+                    $('#FechaNa').val(objeto.FechaNa);
+                    $('#DireccionEs').val(objeto.DireccionEs);
+                    $('#Email').val(objeto.Email);
+                    $('#Tel').val(objeto.Tel);
+                  }
 
         })
 
-        function refrescar(obj) {
-
-          $('#NumControl').val(obj.NumControl);
-          $('#NombreEs').val(obj.NombreEs);
-          $('#ApellidoPa').val(obj.ApellidoPa);
-          $('#ApellidoMa').val(obj.ApellidoMa);
-          $('#FechaNa').val(obj.FechaNa);
-          $('#DireccionEs').val(obj.DireccionEs);
-          $('#Email').val(obj.Email);
-          $('#Tel').val(obj.Tel);
-        }
-
-
-
-
-
+        
 
     });
 
