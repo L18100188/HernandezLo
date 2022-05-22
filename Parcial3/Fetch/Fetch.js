@@ -65,7 +65,7 @@ window.onload = function() {
 
             /*promesa.then(function(respuesta) {respuesta.json(); });*/
 
-            Promise.then(res => res.json())
+            Promise.then(res => Fetch.js())
                    .then(function(dato) {refrescar(dato) });
 
 
