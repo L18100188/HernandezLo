@@ -61,26 +61,28 @@ window.onload = function() {
 
         $('#btnJsonF').click(function() {
 
-            let promesa = feth('getregistros.php');
+            let Promise = fetch('getregistros.php');
 
             /*promesa.then(function(respuesta) {respuesta.json(); });*/
 
-            promesa.then(res => res.json())
+            Promise.then(res => res.json())
                    .then(function(dato) {refrescar(dato) });
 
-                   function refrescar(objeto) {
-
-                    $('#NumControl').val(objeto.NumControl);
-                    $('#NombreEs').val(objeto.NombreEs);
-                    $('#ApellidoPa').val(objeto.ApellidoPa);
-                    $('#ApellidoMa').val(objeto.ApellidoMa);
-                    $('#FechaNa').val(objeto.FechaNa);
-                    $('#DireccionEs').val(objeto.DireccionEs);
-                    $('#Email').val(objeto.Email);
-                    $('#Tel').val(objeto.Tel);
-                  }
 
         })
+
+        
+        function refrescar(objeto) {
+
+            $('#NumControl').val(objeto.NumControl);
+            $('#NombreEs').val(objeto.NombreEs);
+            $('#ApellidoPa').val(objeto.ApellidoPa);
+            $('#ApellidoMa').val(objeto.ApellidoMa);
+            $('#FechaNa').val(objeto.FechaNa);
+            $('#DireccionEs').val(objeto.DireccionEs);
+            $('#Email').val(objeto.Email);
+            $('#Tel').val(objeto.Tel);
+          }
 
         
 
