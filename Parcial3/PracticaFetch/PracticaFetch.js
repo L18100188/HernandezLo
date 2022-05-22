@@ -13,7 +13,7 @@ window.onload = function() {
             document.getElementById("TituloF").innerHTML = req.responseText;  
      }};
     
-     req.open("GET", "CambiarAjaxs.txt", true);
+     req.open("GET", "PracticaAjax.txt", true);
      req.send();
     
     }
@@ -45,45 +45,40 @@ window.onload = function() {
     
             });
         });
-
-        $('#btnPromesa').click(function() {
-
-            new Promise(function(resolve, reject){
-                var sol = new XMLHttpRequest();
-                sol.onreadystatechange = function() {
-                    if(sol.readyState == 4 && sol.status == 200) {
-                        resolve(sol.responseText); 
-                    }}
-                    sol.open("GET", "PracticaPromesas.txt", true)
-                    sol.send();
-            }).then( value => document.getElementById("TituloF").innerHTML = value );
-        })
-
-        $('#btnJsonF').click(function() {
-
-            fetch('getregistros.php')
-                .then((respuesta) => respuesta.json())
-                   .then(function(dato) {refrescar(dato) });
-
-
-        });
-
-        function refrescar(objeto) {
-
-            $('#NumControl').val(objeto.NumControl);
-            $('#NombreEs').val(objeto.NombreEs);
-            $('#ApellidoPa').val(objeto.ApellidoPa);
-            $('#ApellidoMa').val(objeto.ApellidoMa);
-            $('#FechaNa').val(objeto.FechaNa);
-            $('#DireccionEs').val(objeto.DireccionEs);
-            $('#Email').val(objeto.Email);
-            $('#Tel').val(objeto.Tel);
-          }
-
-        
-
+    
     });
 
-    
+    $("#btnjson").click(function() {
+        $.post('getregistro.php', {}, function(data) {
+          console.log(data);
+          $('#NumControl').val(data.NumControl);
+          $('#NombreEs').val(data.NombreEs);
+          $('#ApellidoPa').val(data.ApellidoPa);
+          $('#ApellidoMa').val(data.ApellidoMa);
+          $('#FechaNa').val(data.FechaNa);
+          $('#DireccionEs').val(data.DireccionEs);
+          $('#Email').val(data.Email);
+          $('#Tel').val(data.Tel);
+      
+        }, 'json');
+      });
+
+
+      $('#btnFetch').click(function() {
+          fetch('getregistros.php')
+               .then((respuesta) => respuesta.json() )
+                    .then(function(dato) {refrescar(dato) });
+      });
+
+      function refrescar(objeto) {
+        $('#NumControl').val(objeto.NumControl);
+        $('#NombreEs').val(objeto.NombreEs);
+        $('#ApellidoPa').val(objeto.ApellidoPa);
+        $('#ApellidoMa').val(objeto.ApellidoMa);
+        $('#FechaNa').val(objeto.FechaNa);
+        $('#DireccionEs').val(objeto.DireccionEs);
+        $('#Email').val(objeto.Email);
+        $('#Tel').val(objeto.Tel);
+      }
     
 } 
