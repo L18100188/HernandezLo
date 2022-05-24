@@ -13,6 +13,6 @@ try {
     exit();
 }
 
-$con->setAttribute(PDO:ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 ?>
