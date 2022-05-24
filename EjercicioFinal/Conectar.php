@@ -6,7 +6,7 @@ $password = '123456';
 
 try {
     $con = new PDO ("mysql:host=$hostname;dbname=$database", $username, $password);
-    echo "Se conecto";
+    echo "Se conecto  ;";
 }catch (PDOException $e)
 {
     echo "Error de conexion a la base de datos +";

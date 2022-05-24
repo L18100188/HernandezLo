@@ -11,7 +11,7 @@ create table registro
   FechaNa varchar (30),
   DireccionEs varchar(60),
   Email varchar(60),
-  Tel varchar(30)
+  Tel varchar(30),
   constraint PE_NumControl Primary key(NumControl)
  );
 
