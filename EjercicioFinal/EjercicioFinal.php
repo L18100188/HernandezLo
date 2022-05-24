@@ -1,7 +1,7 @@
 <?php
-$hostname = 'LAPTOP-CI8C10O8\MSSQLSERVER2'; //serverName\instanceName
+$hostname = 'localhost'; //serverName\instanceName
 $database = 'l18100188';
-$username = '18100188';
+$username = 'root';
 $password = '123456';
 
 try {
