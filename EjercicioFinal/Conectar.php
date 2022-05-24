@@ -8,8 +8,8 @@ try {
     $con = new PDO ("sqlserver:host=$hostname;dbname=$database", $username, $password);
 }catch (PDOException $e)
 {
-    echo "Error de conexion a la base de datos";
-    echo $e-getMessage();
+    echo "Error de conexion a la base de datos +";
+    echo $e->getMessage();
     exit();
 }
 
