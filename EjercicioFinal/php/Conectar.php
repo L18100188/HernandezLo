@@ -1,6 +1,6 @@
 <?php
 
-$paridCte=$_POST['par1'];
+$varId=$_POST['par1'];
 $hostname = 'localhost'; //serverName\instanceName
 $database = 'l18100188';
 $username = 'root';
@@ -19,7 +19,7 @@ try {
 //$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 try {
-    $consultaSql = "SELECT * FROM l18100188.registro where NumControl=".$paridCte;
+    $consultaSql = "SELECT * FROM registro where NumControl=".$varId;
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
 

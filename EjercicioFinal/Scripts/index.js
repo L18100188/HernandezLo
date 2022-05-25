@@ -70,9 +70,23 @@ window.onload = function() {
                 refrescar(data);
             }, 'json');
 
+            
+
+            //$('#ventanaM').modal();
+
+            //$('#ventanaM').on('hidden.bs.modal', function (e) {
+            //    let varId = $("#idconsulta").val();
+            //    $.post('./php/Conectar.php', {par1:varId}, function(data){ 
+            //    refrescar(data);
+            //}, 'json');
+
+            //})
+            
+
       });
 
       function refrescar(objeto) {
+        console.log(objeto);
         $('#NumControl').val(objeto.NumControl);
         $('#NombreEs').val(objeto.NombreEs);
         $('#ApellidoPa').val(objeto.ApellidoPa);
