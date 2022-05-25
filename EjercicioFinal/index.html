@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Formularios</title>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script src="./Scripts/index.js"></script>
+</head>
+<body></br>
+    <div class="container">
+     <form class="form">
+
+      <div id="TituloF"><h2>Formulario Bootstrap</h2></div></br> 
+      
+      <button id="btnCambiarT"  type="button" class="btn-secondary">Cambiar titulo</button> 
+      <button id="btnRegresarT" type="button" class="btn-secondary">Regresar</button></br></br>
+      
+
+      <div class="row">
+          <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                <label for="NumControl" class="control-label">Num. de Control</label>
+                <input id="NumControl" type="text" class="form-control" placeholder="00000000"/>
+          </div>
+          <div class="form-group col-sm-12 col-md-12 col-lg-8">
+                <label for="NombreEs">Nombre(s)</label>
+                <input id="NombreEs" type="text" class="form-control" placeholder="Nombre(s)"/>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-sm-12 col-md-6 col-lg-6">
+              <label for="ApellidoPa" class="control-label">Apellido Paterno</label>
+              <input id="ApellidoPa" type="text" class="form-control" placeholder="Apellido Paterno"/>
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-6">
+              <label for="ApellidoMa">Apellido Materno</label>
+              <input id="ApellidoMa" type="text" class="form-control" placeholder="Apellido Materno"/>
+        </div>
+       </div>
+
+   
+
+      <div class="row">
+        <div class="form-group col-sm-12 col-md-4 col-lg-5">
+              <label for="FechaNa" class="control-label">Fecha de nacimiento</label>
+              <input id="FechaNa" type="text" class="form-control" placeholder="dd/mm/aaaa"/>
+        </div>
+        <div class="form-group col-sm-12 col-md-8 col-lg-7">
+              <label for="DireccionEs">Direccion</label>
+              <input id="DireccionEs" type="text" class="form-control" placeholder="Calle #Numero"/>
+        </div>
+      </div>
+
+    <div class="row">
+        <div class="form-group col-sm-12 col-md-8 col-lg-6">
+              <label for="Email" class="control-label">Email</label>
+              <input id="Email" type="text" class="form-control" placeholder="Email"/>
+        </div>
+        <div class="form-group col-sm-12 col-md-4 col-lg-6">
+            <label for="Tel">Telefono</label>
+            <input id="Tel" type="text" class="form-control" placeholder="(Lada) Numero"/>
+      </div>       
+       </div>
+
+
+      </div></br> 
+
+       <button id="btnAlerta" type="button" class="btn btn-primary">Alerta</button>
+       <button id="btnAt" type="button" class="btn btn-primary" data-toggle="modal" data-target="#ventanaM">Atributos</button>
+       <button id="btnJS" type="button" class="btn btn-primary">JS</button>
+       <button id="btnSw" type="button" class="btn btn-primary">Sweet</button>
+       <button id="btnjson" type="button" class="btn btn-primary">json</button>
+       <button id="btnFetch" type="button" class="btn btn-primary">Fetch</button>
+       <button id="btnRe" type="reset" class="btn btn-secondary">Limpiar</button>
+    
+       <div id="ventanaA" class="alert alert-primary alert-dismissible collapse" role="alert">
+        Alerta!!!
+        <button id="btnCerrarA" type="button" class="close" aria-hidden="true" >
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      
+       <div class="modal fade" id="ventanaM" tabindex="-1" role="dialog" aria-labelledby="TituloM" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="TituloM">¿Esta seguro que desea guardar los datos?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+           </div>
+           <div class="modal-body">
+            Los cambios seran irreversibles...
+           </div>
+           <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">Guardar datos</button>
+           </div>
+          </div>
+         </div>
+        </div>
+             
+    </form>   
+</body>
+<html>

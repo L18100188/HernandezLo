@@ -1,6 +1,9 @@
 <?php
 include "Conectar.php";
 
+//$paridCte=$_POST['par1'];
+
+
 
 try {
     $query=$con->prepare("select * from registro");
