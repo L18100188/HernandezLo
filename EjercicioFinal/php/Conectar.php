@@ -29,7 +29,7 @@ try {
     $row['informacion']= 'Consulta Exitosa';
     $row['mensaje']    = 'Consult Encontrado';
     $row['detalle']    = $resultado;
-    //$consulta->closeCursor();
+    $consulta->closeCursor();
 
 }catch(PDOException $e)
 {
