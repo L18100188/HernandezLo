@@ -19,7 +19,7 @@ try {
 //$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 try {
-    $consultaSql = "SELECT * FROM registro where NumControl=".$varId;
+    $consultaSql = "select * from registro where NumControl=".$varId;
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
 
