@@ -25,10 +25,6 @@ try {
     $consulta -> execute();
 
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
-    $row['resultado']  = '0';
-    $row['informacion']= 'Consulta Exitosa';
-    $row['mensaje']    = 'Consult Encontrado';
-    $row['detalle']    = $resultado;
     $consulta->closeCursor();
 
 }catch(PDOException $e)
