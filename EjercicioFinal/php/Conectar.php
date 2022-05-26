@@ -1,6 +1,6 @@
 <?php
 
-$varId=$_POST['par1'];
+$varId = $_POST['par1'];
 $hostname = 'localhost'; //serverName\instanceName
 $database = 'l18100188';
 $username = 'root';
@@ -21,10 +21,15 @@ try {
 try {
     $consultaSql = "select * from registro where NumControl=".$varId;
     $consulta = $con -> prepare($consultaSql);
+    $consulta->bindParam(1,$varId);
     $consulta -> execute();
 
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
-    $consulta->closeCursor();
+    $row['resultado']  = '0';
+    $row['informacion']= 'Consulta Exitosa';
+    $row['mensaje']    = 'Consult Encontrado';
+    $row['detalle']    = $resultado;
+    //$consulta->closeCursor();
 
 }catch(PDOException $e)
 {
