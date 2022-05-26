@@ -19,10 +19,9 @@ try {
 //$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 try {
-    $consultaSql = "select * from registro where NumControl=".$varId;
+    $consultaSql = "select * from registro where NumControl=".$varId;   
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
-
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
     $consulta->closeCursor();
 
@@ -31,5 +30,7 @@ try {
     echo "ERROR";
     echo $e-> getMessage();
 }
+
 echo json_encode($resultado);
+
 ?>
