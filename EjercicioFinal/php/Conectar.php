@@ -21,7 +21,6 @@ try {
 try {
     $consultaSql = "select * from registro where NumControl=".$varId;
     $consulta = $con -> prepare($consultaSql);
-    $consulta->bindParam(1,$varId);
     $consulta -> execute();
 
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
