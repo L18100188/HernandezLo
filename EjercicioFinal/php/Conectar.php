@@ -22,6 +22,7 @@ try {
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+    $res_utf8 = array_map('utf8_encode', $resultado);
     $consulta->closeCursor();
     
 
@@ -31,8 +32,8 @@ try {
     echo $e-> getMessage();
 }
 
-$res_utf8 = array_map('utf8_encode', $resultado);
-json_encode($res_utf8); 
+
+echo json_encode($res_utf8); 
   
     
 
