@@ -8,7 +8,6 @@ $password = '123456';
 
 try {
     $con = new PDO ("mysql:host=$hostname;dbname=$database", $username, $password);
-    echo "Se conecto  ;";
 }catch (PDOException $e)
 {
     echo "Error de conexion a la base de datos +";
@@ -24,6 +23,7 @@ try {
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
     $consulta->closeCursor();
+    
 
 }catch(PDOException $e)
 {
@@ -31,6 +31,10 @@ try {
     echo $e-> getMessage();
 }
 
-echo json_encode($resultado);
+$res_utf8 = array_map('utf8_encode', $resultado);
+json_encode($res_utf8); 
+  
+    
+
 
 ?>

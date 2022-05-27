@@ -61,7 +61,7 @@ window.onload = function() {
           $('#Tel').val(data.Tel);
       
         }, 'json');
-      });
+    });
 
 
       $('#btnFetch').click(function() {
