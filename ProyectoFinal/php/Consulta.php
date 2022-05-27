@@ -1,6 +1,6 @@
 <?php
 
-$varId = $_POST['par1'];
+$parid = $_POST['par1'];
 $hostname = 'localhost'; //serverName\instanceName
 $database = 'l18100188';
 $username = 'root';
@@ -18,7 +18,7 @@ try {
 //$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 try {
-    $consultaSql = "select * from registro where NumControl=".$varId;   
+    $consultaSql = "select * from registro where NumControl=".$parid;   
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
@@ -35,7 +35,4 @@ try {
 
 echo json_encode($res_utf8); 
   
-    
-
-
 ?>
