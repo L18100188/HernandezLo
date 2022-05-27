@@ -64,7 +64,7 @@ window.onload = function() {
     });
 
 
-      $('#btnFetch').click(function() {
+      $('#btnCon').click(function() {
         let parid=prompt("Teclee el ID a consultar");
 
         $.post('./php/Conectar.php',{par1:parid},function(data){
