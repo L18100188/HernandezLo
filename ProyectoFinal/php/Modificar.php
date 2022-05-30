@@ -18,7 +18,18 @@ try {
 //$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 try {
-    $consultaSql = "UPDATE registro SET nombreES=.$parid NumControl=".$parid;   
+    $consultaSql = "UPDATE registro
+    SET NumControl = '".$parid."', 
+    NombreEs = '".$parid."', 
+    ApellidoPa = '"$parid."', 
+    ApellidoMa  = ".$parid.", 
+    FechaNa ='".$parid."', 
+    DireccionEs = '".$parid."', 
+    Requisitos = '".$parid."', 
+    Email = '".$parid."',
+    Tel = '".$parid."'
+    WHERE NumControl = ".$parid."";
+
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
