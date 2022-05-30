@@ -54,10 +54,10 @@ $(document).ready(function (){
 
       });
 
-      $('#btnMod').click(function() {
-        let parid=prompt("Teclee el Numero de Control a modificar");
+      $('#btnEli').click(function() {
+        let parid=prompt("Teclee el Numero de Control a eliminar");
 
-        $.post('./php/Consulta.php',{par1:parid},function(data){
+        $.post('./php/Eliminar.php',{par1:parid},function(data){
           refrescar(data);
           },'json');
 

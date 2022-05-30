@@ -18,7 +18,7 @@ try {
 //$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 try {
-    $consultaSql = "select * from registro where NumControl=".$parid;   
+    $consultaSql = "Delete from registro where NumControl=".$parid;   
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
