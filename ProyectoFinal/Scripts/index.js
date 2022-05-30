@@ -54,6 +54,15 @@ $(document).ready(function (){
 
       });
 
+      $('#btnMod').click(function() {
+        let parid=prompt("Teclee el Numero de Control a mod");
+
+        $.post('./php/Eliminar.php',{par1:parid},function(data){
+          refrescar(data);
+          },'json');
+
+      });
+
       $('#btnEli').click(function() {
         let parid=prompt("Teclee el Numero de Control a eliminar");
 
