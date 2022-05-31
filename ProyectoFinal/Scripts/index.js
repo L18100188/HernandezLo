@@ -33,8 +33,9 @@ $(document).ready(function (){
         var vema = $('#Email').val();
         var vtel = $('#Tel').val();
 
-        $.post('php/grabar.php',
-                {nom_doc: vnom_doc, app: vap, nom_cur: vnom_curs, cost: vcost, cate: vcatego, email: vemail, requi: vrequi, desc: vdescrip},
+        $.post('php/Agregar.php',
+                {num: vnum, nom: vnom, apa: vapa, ama: vama, fec: vfec, dir: vdir
+                  , ema: vema, tel: vtel},
                 function (ret) {
 
                 if (ret['resultado'] != 0) {
@@ -44,11 +45,11 @@ $(document).ready(function (){
                 }
                 else {
 
-                $('#idUsuario').val(ret['detalle']);
+                //$('#idUsuario').val(ret['detalle']);
                 alert('INSERCION REALIZADA');
-                $('#btnNuevo').prop("disabled", false);    
-                $('#btnRegistrar').prop("disabled", true);    
-                $('#btnEliminar').prop("disabled", false); 
+                //$('#btnNuevo').prop("disabled", false);    
+                //$('#btnRegistrar').prop("disabled", true);    
+                //$('#btnEliminar').prop("disabled", false); 
             }
         },'json');
 

@@ -1,6 +1,14 @@
 <?php
 
-$parid = $_POST['par1'];
+$vNumControl = $_POST['num'];
+$vNombre = $_POST['nom'];
+$vApellidoP = $_POST['apa'];
+$vApellidoM  = $_POST['ama'];
+$vFecha  = $_POST['fec'];
+$vDireccion  = $_POST['dir'];
+$vEmail  = $_POST['ema'];
+$vTelefono  = $_POST['tel'];
+
 $hostname = 'localhost'; //serverName\instanceName
 $database = 'l18100188';
 $username = 'root';
@@ -18,10 +26,22 @@ try {
 //$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 try {
-    $consultaSql = "select * from registro where NumControl=".$parid;   
+    $consultaSql = "INSERT INTO registro 
+    SET NumControl = ?, NombreEs = ?, ApellidoPa  = ?, ApellidoMa = ?, FechaNa =?, DireccionEs = ?, Email = ?, Tel = ?";   
     $consulta = $con -> prepare($consultaSql);
-    $consulta -> execute();
+    $consulta->bindParam(1, $vNumControl);
+    $consulta->bindParam(2, $vNombre);
+    $consulta->bindParam(3, $vApellidoP);
+    $consulta->bindParam(4, $vApellidoM);
+    $consulta->bindParam(5, $vFecha);
+    $consulta->bindParam(6, $vDireccion);
+    $consulta->bindParam(7, $vEmail);
+    $consulta->bindParam(8, $vTelefono);
+    
+    
+    $consulta->execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+    
     $res_utf8 = array_map('utf8_encode', $resultado);
     $consulta->closeCursor();
     
@@ -30,6 +50,11 @@ try {
 {
     echo "ERROR";
     echo $e-> getMessage();
+
+    /*$row['resultado']  = '3';
+    $row['informacion']= 'Error DB';
+    $row['mensaje']    = 'Exepcion en Insercion';
+    $row['detalle']    =  $e->getMessage();*/
 }
 
 
