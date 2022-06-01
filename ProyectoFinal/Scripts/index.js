@@ -80,7 +80,7 @@ $(document).ready(function (){
               function(ret) {
                   alert("Usuario Eliminado");
               }, 'json');
-              alert("Curso Eliminado: ID "+vID);
+              alert("Usuario Eliminado NumControl: "+vID);
           }
 
       });
