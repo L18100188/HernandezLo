@@ -1,6 +1,6 @@
 <?php
 
-$parid = $_POST['par1'];
+$parid = $_POST['num'];
 $hostname = 'localhost'; //serverName\instanceName
 $database = 'l18100188';
 $username = 'root';

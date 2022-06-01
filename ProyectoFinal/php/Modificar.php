@@ -1,6 +1,14 @@
 <?php
 
-$parid = $_POST['par1'];
+$vNumControl = $_POST['num'];
+$vNombre = $_POST['nom'];
+$vApellidoP = $_POST['apa'];
+$vApellidoM  = $_POST['ama'];
+$vFecha  = $_POST['fec'];
+$vDireccion  = $_POST['dir'];
+$vEmail  = $_POST['ema'];
+$vTelefono  = $_POST['tel'];
+
 $hostname = 'localhost'; //serverName\instanceName
 $database = 'l18100188';
 $username = 'root';

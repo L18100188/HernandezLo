@@ -65,11 +65,23 @@ $(document).ready(function (){
       });
 
       $('#btnEli').click(function() {
-        let parid=prompt("Teclee el Numero de Control a eliminar");
+        /*let parid=prompt("Teclee el Numero de Control a eliminar");
 
         $.post('./php/Eliminar.php',{par1:parid},function(data){
           refrescar(data);
-          },'json');
+          },'json');*/
+
+          var vID = $('#NumControl').val();
+
+          if (confirm('Desea eliminar el usuario? '+vID)) 
+          {
+              $.post('php/Eliminar.php',
+              {num: vID},
+              function(ret) {
+                  alert("Usuario Eliminado");
+              }, 'json');
+              alert("Curso Eliminado: ID "+vID);
+          }
 
       });
 
