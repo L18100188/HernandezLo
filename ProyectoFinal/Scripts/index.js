@@ -35,13 +35,28 @@ $(document).ready(function (){
 
       $('#btnAt').click(function() {
 
-        $('#Modal').modal();
+       /* $('#Modal').modal();
         $('#Modal').on('hidden.bs.modal',function(e){
 
             let parid= $('#NCConsulta').val();
             $.post('/php/Consulta.php',{par1:parid},function (data){
                 refrescar(data);
-            },'json');
+            },'json');*/
+
+            swal("Ingresa el NumControl a consultar: ", 
+            {
+              content:"input",
+            })
+            .then((parid) => 
+            {
+               console.log("El NC a CONSULTAR es " + parid);
+               $.post('./php/Consulta.php',{par1:parid},function(data)
+               {
+                 refrescar(data);
+                },'json');
+              })
+              // let idX=prompt("Teclee el ID a consultar");        
+            
 
             btnAg.disabled = false;
             btnMod.disabled = false;
@@ -55,11 +70,16 @@ $(document).ready(function (){
             Email.disabled = false;
             Tel.disabled = false;
 
-          })
+
+        
+
+        });
+
+          
 
 
           
-      });
+      
 
 
       $('#btnAg').click(function() {
