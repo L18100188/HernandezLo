@@ -1,11 +1,46 @@
 $(document).ready(function (){
 
+
+
+    btnAg.disabled = true;
+    btnMod.disabled = true;
+    btnEli.disabled = true;
+    NumControl.disabled = true;
+    NombreEs.disabled = true;
+    ApellidoPa.disabled = true;
+    ApellidoMa.disabled = true;
+    FechaNa.disabled = true;
+    DireccionEs.disabled = true;
+    Email.disabled = true;
+    Tel.disabled = true;
+
+
+
+
+
+
     $('#btnCon').click(function() {
         let parid=prompt("Teclee el Numero de Control a consultar");
 
         $.post('./php/Consulta.php',{par1:parid},function(data){
           refrescar(data);
           },'json');
+
+          btnAg.disabled = false;
+          btnMod.disabled = false;
+          btnEli.disabled = false;
+          NumControl.disabled = false;
+          NombreEs.disabled = false;
+          ApellidoPa.disabled = false;
+          ApellidoMa.disabled = false;
+          FechaNa.disabled = false;
+          DireccionEs.disabled = false;
+          Email.disabled = false;
+          Tel.disabled = false;
+          
+
+
+
       });
 
       $('#btnAt').click(function() {
@@ -35,41 +70,32 @@ $(document).ready(function (){
 
         $.post('php/Agregar.php',
                 {num: vnum, nom: vnom, apa: vapa, ama: vama, fec: vfec, dir: vdir
-                  , ema: vema, tel: vtel},
-                function (ret) {
-
-                if (ret['resultado'] != 0) {
-
-                console.log('Error Insercion');
-                alert('ERROR INSERCION');
-                }
-                else {
-
-                //$('#idUsuario').val(ret['detalle']);
-                alert('INSERCION REALIZADA');
-                //$('#btnNuevo').prop("disabled", false);    
-                //$('#btnRegistrar').prop("disabled", true);    
-                //$('#btnEliminar').prop("disabled", false); 
-            }
-        },'json');
+                  , ema: vema, tel: vtel});
+                  swal("Se ha agregado");
+               
+           
 
       });
 
       $('#btnMod').click(function() {
-        let parid=prompt("Teclee el Numero de Control a mod");
+        let nc = $('#NumControl').val();
+        let no = $('#NombreEs').val();
+        let pa = $('#ApellidoPa').val();
+        let ma = $('#ApellidoMa').val();
+        let fe = $('#FechaNa').val();
+        let di = $('#DireccionEs').val();
+        let em = $('#Email').val();
+        let te = $('#Tel').val();
 
-        $.post('./php/Eliminar.php',{par1:parid},function(data){
-          refrescar(data);
-          },'json');
+        $.post('php/Modificar.php',
+        {nume: nc, nomb: no, apat: pa, amat: ma, fech: fe, dire: di
+          , emi: em, tele: te});
+        swal("Se ha modificado");
 
       });
 
       $('#btnEli').click(function() {
-        /*let parid=prompt("Teclee el Numero de Control a eliminar");
 
-        $.post('./php/Eliminar.php',{par1:parid},function(data){
-          refrescar(data);
-          },'json');*/
 
           var vID = $('#NumControl').val();
 
@@ -82,6 +108,24 @@ $(document).ready(function (){
               }, 'json');
               alert("Usuario Eliminado NumControl: "+vID);
           }
+
+          
+
+      });
+
+      $('#btnRe').click(function() {
+
+        btnAg.disabled = true;
+        btnMod.disabled = true;
+        btnEli.disabled = true;
+        NumControl.disabled = true;
+        NombreEs.disabled = true;
+        ApellidoPa.disabled = true;
+        ApellidoMa.disabled = true;
+        FechaNa.disabled = true;
+        DireccionEs.disabled = true;
+        Email.disabled = true;
+        Tel.disabled = true;
 
       });
 

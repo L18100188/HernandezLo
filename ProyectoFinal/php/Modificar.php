@@ -1,13 +1,13 @@
 <?php
 
-$vNumControl = $_POST['num'];
-$vNombre = $_POST['nom'];
-$vApellidoP = $_POST['apa'];
-$vApellidoM  = $_POST['ama'];
-$vFecha  = $_POST['fec'];
-$vDireccion  = $_POST['dir'];
-$vEmail  = $_POST['ema'];
-$vTelefono  = $_POST['tel'];
+$NumControl = $_POST['nume'];
+$vNombre = $_POST['nomb'];
+$vApellidoP = $_POST['apat'];
+$vApellidoM  = $_POST['amat'];
+$vFecha  = $_POST['fech'];
+$vDireccion  = $_POST['dire'];
+$vEmail  = $_POST['emi'];
+$vTelefono  = $_POST['tele'];
 
 $hostname = 'localhost'; //serverName\instanceName
 $database = 'l18100188';
@@ -26,22 +26,16 @@ try {
 //$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 try {
-    $consultaSql = "UPDATE registro
-    SET NumControl = '".$parid."', 
-    NombreEs = '".$parid."', 
-    ApellidoPa = '"$parid."', 
-    ApellidoMa  = ".$parid.", 
-    FechaNa ='".$parid."', 
-    DireccionEs = '".$parid."', 
-    Requisitos = '".$parid."', 
-    Email = '".$parid."',
-    Tel = '".$parid."'
-    WHERE NumControl = ".$parid."";
+    $consultaSql = "UPDATE registro SET NombreEs='$vNombre', ApellidoPA='$vApellidoP',
+                                                           ApellidoMa='$vApellidoM', FechaNa='$vFecha',
+                                                           DireccionEs='$vDireccion', Email='$vEmail',
+                                                           Tel='$vTelefono' WHERE NumControl ='$NumControl'";
+
 
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
-    $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
-    $res_utf8 = array_map('utf8_encode', $resultado);
+    //$resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+    //$res_utf8 = array_map('utf8_encode', $resultado);
     $consulta->closeCursor();
     
 
@@ -52,6 +46,6 @@ try {
 }
 
 
-echo json_encode($res_utf8); 
+//echo json_encode($res_utf8); 
   
 ?>
