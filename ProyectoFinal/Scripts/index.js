@@ -42,9 +42,6 @@ $(document).ready(function (){
             $.post('/php/Consulta.php',{par1:parid},function (data){
                 refrescar(data);
             },'json');
-        
-          
-
 
             btnAg.disabled = false;
             btnMod.disabled = false;
@@ -79,6 +76,17 @@ $(document).ready(function (){
                 {num: vnum, nom: vnom, apa: vapa, ama: vama, fec: vfec, dir: vdir
                   , ema: vema, tel: vtel});
                   swal("Se ha agregado un nuevo registro");
+
+                  NombreEs.value = "";
+                  ApellidoPa.value = "";
+                  ApellidoMa.value = "";
+                  FechaNa.value = "";
+                  DireccionEs.value = "";
+                  Email.value = "";
+                  Tel.value = "";
+                  NumControl.value = "";
+
+        
                
            
 
