@@ -1,7 +1,5 @@
 $(document).ready(function (){
 
-
-
     btnAg.disabled = true;
     btnMod.disabled = true;
     btnEli.disabled = true;
@@ -13,11 +11,6 @@ $(document).ready(function (){
     DireccionEs.disabled = true;
     Email.disabled = true;
     Tel.disabled = true;
-
-
-
-
-
 
     $('#btnCon').click(function() {
         let parid=prompt("Teclee el Numero de Control a consultar");
@@ -38,11 +31,6 @@ $(document).ready(function (){
           Email.disabled = false;
           Tel.disabled = false;
 
-          
-          
-
-
-
       });
 
       $('#btnAt').click(function() {
@@ -51,22 +39,24 @@ $(document).ready(function (){
         $('#Modal').on('hidden.bs.modal',function(e){
 
             let parid= $('#NCConsulta').val();
-            $.post('./php/Consulta.php',{par1:parid},function (data){
+            $.post('/php/Consulta.php',{par1:parid},function (data){
                 refrescar(data);
             },'json');
+        
+          
 
 
             btnAg.disabled = false;
-          btnMod.disabled = false;
-          btnEli.disabled = false;
-          NumControl.disabled = false;
-          NombreEs.disabled = false;
-          ApellidoPa.disabled = false;
-          ApellidoMa.disabled = false;
-          FechaNa.disabled = false;
-          DireccionEs.disabled = false;
-          Email.disabled = false;
-          Tel.disabled = false;
+            btnMod.disabled = false;
+            btnEli.disabled = false;
+            NumControl.disabled = false;
+            NombreEs.disabled = false;
+            ApellidoPa.disabled = false;
+            ApellidoMa.disabled = false;
+            FechaNa.disabled = false;
+            DireccionEs.disabled = false;
+            Email.disabled = false;
+            Tel.disabled = false;
 
           })
 
@@ -88,7 +78,7 @@ $(document).ready(function (){
         $.post('php/Agregar.php',
                 {num: vnum, nom: vnom, apa: vapa, ama: vama, fec: vfec, dir: vdir
                   , ema: vema, tel: vtel});
-                  swal("Se ha agregado");
+                  swal("Se ha agregado un nuevo registro");
                
            
 
@@ -107,7 +97,7 @@ $(document).ready(function (){
         $.post('php/Modificar.php',
         {nume: nc, nomb: no, apat: pa, amat: ma, fech: fe, dire: di
           , emi: em, tele: te});
-        swal("Se ha modificado");
+        swal("Se ha modificado correctamente");
 
       });
 
@@ -116,15 +106,21 @@ $(document).ready(function (){
 
           var vID = $('#NumControl').val();
 
-          if (confirm('Desea eliminar el usuario? '+vID)) 
-          {
-              $.post('php/Eliminar.php',
-              {num: vID},
-              function(ret) {
-                  alert("Usuario Eliminado");
-              }, 'json');
-              alert("Usuario Eliminado NumControl: "+vID);
-          }
+          
+          $.post('php/Eliminar.php',
+          {num: vID});
+
+
+          swal("Se ha eliminado correctamente");
+
+              NombreEs.value = "";
+              ApellidoPa.value = "";
+              ApellidoMa.value = "";
+              FechaNa.value = "";
+              DireccionEs.value = "";
+              Email.value = "";
+              Tel.value = "";
+              NumControl.value = "";
 
           
 
