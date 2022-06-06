@@ -34,5 +34,6 @@ try {
 
 
 echo json_encode($res_utf8); 
+
   
 ?>
