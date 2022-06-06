@@ -73,31 +73,35 @@
         <button id="btnAg" type="button" class="btn btn-primary">Agregar</button>
         <button id="btnEli" type="button" class="btn btn-primary">Eliminar</button>
         <button id="btnMod" type="button" class="btn btn-primary">Modificar</button>
-        <button id="btnAt" type="button" class="btn btn-primary" data-toggle="modal" data-target="#ventanaM">Ejemplo</button>
+        <!--<button id="btnAt" type="button" class="btn btn-primary" data-toggle="modal" data-target="#ventanaM">Ejemplo</button> -->
+        <button id="btnAt" type="button" class="btn btn-primary" title="Consulta" data-toggle="modal" data-target="#Modal">Ejemplo</button>
         <button id="btnRe" type="reset" class="btn btn-secondary">Limpiar</button>
         </center>
 
 
-        <div class="modal fade" id="ventanaM" tabindex="-1" role="dialog" aria-labelledby="TituloM" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-             <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="TituloM">¿Esta seguro que desea guardar los datos?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-               </div>
-               <div class="modal-body" onsubmit=" sendDataProduct();">
-                <label for="Cons">Consulta</label>
-                <input id="Cons" type="text" class="form-control" placeholder="Consulta"/>
-               </div>
-               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="submit" id="btnCons" class="btn btn-primary">Consultar</button>
-               </div>
+        <div class="modal" id="Modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Consulta NumControl</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button> 
+                </div>
+                <div class="modal-body">
+                      <form class="formModal">
+                            <label for="NC">Teclee el NumControl: </label>
+                            <input id="NCConsulta" type="text" class="form-control" placeholder="NC">
+                      </form>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Cerrar</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Consultar</button>
+                </div>
               </div>
-             </div>
-        </div>
+            </div>
+          </div>
 
     </form>   
 </body>

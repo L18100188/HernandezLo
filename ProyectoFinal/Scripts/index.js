@@ -37,6 +37,8 @@ $(document).ready(function (){
           DireccionEs.disabled = false;
           Email.disabled = false;
           Tel.disabled = false;
+
+          
           
 
 
@@ -44,17 +46,32 @@ $(document).ready(function (){
       });
 
       $('#btnAt').click(function() {
-        $('#ventanaM').modal();
-        $('#ventanaM').on('hidden.bs.modal', function (e) {
 
-          let parid = $('#Cons').val();
-          $.post('./php/Consulta.php',{par1:parid},function(data){
-            refrescar(data);
+        $('#Modal').modal();
+        $('#Modal').on('hidden.bs.modal',function(e){
+
+            let parid= $('#NCConsulta').val();
+            $.post('./php/Consulta.php',{par1:parid},function (data){
+                refrescar(data);
             },'json');
 
-        })
 
-        
+            btnAg.disabled = false;
+          btnMod.disabled = false;
+          btnEli.disabled = false;
+          NumControl.disabled = false;
+          NombreEs.disabled = false;
+          ApellidoPa.disabled = false;
+          ApellidoMa.disabled = false;
+          FechaNa.disabled = false;
+          DireccionEs.disabled = false;
+          Email.disabled = false;
+          Tel.disabled = false;
+
+          })
+
+
+          
       });
 
 
